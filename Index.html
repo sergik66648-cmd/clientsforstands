@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Маршрут по клиентам — исправлено (без Северного проезда)</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background: #f2f5f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 12px;
+        }
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            background: white;
+            border-radius: 32px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            padding: 24px;
+        }
+        h1 {
+            font-size: 1.9rem;
+            font-weight: 600;
+            color: #1b2b44;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .ya-badge {
+            background: #fc3f1d;
+            color: white;
+            padding: 4px 14px;
+            border-radius: 40px;
+            font-size: 0.8rem;
+        }
+        .subhead {
+            color: #2b3b5c;
+            margin: 16px 0 24px;
+            border-left: 4px solid #fc3f1d;
+            padding-left: 16px;
+            background: #ffefeb;
+            border-radius: 0 14px 14px 0;
+            padding: 14px 18px;
+        }
+        .map-container {
+            border-radius: 30px;
+            overflow: hidden;
+            height: 470px;
+            margin-bottom: 28px;
+            border: 1px solid #dae2ec;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .stops-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin: 30px 0 20px;
+        }
+        .stop-card {
+            background: white;
+            border-radius: 24px;
+            padding: 18px 22px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            border: 1px solid #edf2f8;
+        }
+        .stop-number {
+            width: 44px;
+            height: 44px;
+            background: #fc3f1d;
+            color: white;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+        .stop-info { flex: 1; }
+        .stop-title {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #121f35;
+        }
+        .stop-address {
+            color: #54657e;
+            font-size: 0.96rem;
+            margin-top: 4px;
+        }
+        .stop-time {
+            background: #ffeeea;
+            border-radius: 40px;
+            padding: 10px 20px;
+            font-weight: 600;
+            color: #c6280c;
+            white-space: nowrap;
+        }
+        .note-box {
+            background: #fef4e8;
+            border-left: 5px solid #f5a342;
+            padding: 18px 24px;
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+        .ya-link-button {
+            display: inline-block;
+            background: #fc3f1d;
+            color: white;
+            font-weight: 600;
+            padding: 14px 34px;
+            border-radius: 60px;
+            text-decoration: none;
+            margin: 18px 0 8px;
+        }
+        .flex-center { display: flex; justify-content: center; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>🚘 Ваш маршрут <span class="ya-badge">исправлено</span></h1>
+    <div class="subhead">📍 Старт: ул. Евстафьева, 1/9, Балашиха · 6 клиентов · возврат до 16:00</div>
+
+    <!-- ЧИСТЫЙ iframe — никакого Северного проезда -->
+    <div class="map-container">
+        <iframe src="https://yandex.ru/map-widget/v1/?ll=38.059005%2C55.628756&z=9&pt=37.979251%2C55.809201~37.950166%2C55.807016~37.958589%2C55.792954~37.894915%2C55.682488~38.440017%2C55.511688~38.438613%2C55.461607~38.672867%2C55.552011~37.979251%2C55.809201&pl=37.979251%2C55.809201~37.950166%2C55.807016~37.958589%2C55.792954~37.894915%2C55.682488~38.440017%2C55.511688~38.438613%2C55.461607~38.672867%2C55.552011~37.979251%2C55.809201&l=map&mode=routes&rtext=55.809201%2C37.979251~55.807016%2C37.950166~55.792954%2C37.958589~55.682488%2C37.894915~55.511688%2C38.440017~55.461607%2C38.438613~55.552011%2C38.672867~55.809201%2C37.979251&rtt=auto" allowfullscreen></iframe>
+    </div>
+
+    <div class="flex-center">
+        <a class="ya-link-button" href="https://yandex.ru/maps/?rtext=55.809201%2C37.979251~55.807016%2C37.950166~55.792954%2C37.958589~55.682488%2C37.894915~55.511688%2C38.440017~55.461607%2C38.438613~55.552011%2C38.672867~55.809201%2C37.979251&rtt=auto" target="_blank">
+            🧭 Открыть в Яндекс Картах
+        </a>
+    </div>
+
+    <div class="stops-list">
+        <div class="stop-card"><div class="stop-number">1</div><div class="stop-info"><div class="stop-title">ИП Юсуфзай М.Ш.</div><div class="stop-address">📍 Балашиха, Советская ул., 12</div></div><div class="stop-time">7:30–8:00</div></div>
+        <div class="stop-card"><div class="stop-number">2</div><div class="stop-info"><div class="stop-title">ИП Кушнир С.Л.</div><div class="stop-address">📍 Балашиха, Спортивная ул., 4</div></div><div class="stop-time">8:20–8:50</div></div>
+        <div class="stop-card"><div class="stop-number">3</div><div class="stop-info"><div class="stop-title">ИП Ротарь И.Н.</div><div class="stop-address">📍 Люберцы, Инициативная ул., 8А</div></div><div class="stop-time">9:30–10:00</div></div>
+        <div class="stop-card"><div class="stop-number">4</div><div class="stop-info"><div class="stop-title">ИП Межуева Н.Н.</div><div class="stop-address">📍 Раменский р-н, с. Михайловская Слобода, Старорязанская ул., 4</div></div><div class="stop-time">10:50–11:20</div></div>
+        <div class="stop-card"><div class="stop-number">5</div><div class="stop-info"><div class="stop-title">ООО «СПЕЦТОРГ»</div><div class="stop-address">📍 Белоозёрский, ул. Коммунальная, 54</div></div><div class="stop-time">12:00–12:30</div></div>
+        <div class="stop-card"><div class="stop-number">6</div><div class="stop-info"><div class="stop-title">ИП Зверев В.В.</div><div class="stop-address">📍 Воскресенск, ул. Первостроителей, 2А</div></div><div class="stop-time">13:00–13:30</div></div>
+        <div class="stop-card" style="background:#ecf3fa"><div class="stop-number" style="background:#344e6c">↩️</div><div class="stop-info"><div class="stop-title">Возврат</div><div class="stop-address">📍 ул. Евстафьева, 1/9, Балашиха</div></div><div class="stop-time" style="background:#d7e1ed">~15:30</div></div>
+    </div>
+
+    <div class="note-box">
+        🧩 Отдельные поездки: Орехово‑Зуево, Куровское, Егорьевск, Москва (Кировоградская)
+    </div>
+</div>
+</body>
+</html>
